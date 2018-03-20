@@ -12,39 +12,47 @@
         tools:context=".MainActivity">
 
     <TextView
-            android:id="@+id/tx_title"
-            android:layout_width="wrap_content"
+            android:id="@+id/tx_from_fragment"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#4785f9"
-            android:text="this is second activity"/>
+            android:text="this is second activity" android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"/>
 
     <EditText
-            android:id="@+id/ed_input"
+            android:id="@+id/ed_activity_to_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_edit_text"
-            android:layout_below="@+id/tx_title"
+            android:layout_below="@+id/tx_from_fragment"
             android:layout_centerHorizontal="true"
             android:gravity="center"/>
     <Button
             android:id="@+id/second_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="传值"
-            android:layout_below="@+id/ed_input"
+            android:text="TO FRAGMENT"
+            android:layout_below="@+id/ed_activity_to_fragment"
             android:gravity="center"
             android:layout_centerHorizontal="true"
             android:onClick="send"/>
-    <!--展示内容-->
+
+    <!--activity传值给fragment的展示内容-->
     <LinearLayout
-            android:id="@+id/layout_content"
+            android:id="@+id/layout_fragment_data"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_alignParentBottom="true"
+            android:layout_height="150dp"
             android:orientation="horizontal"
-    >
+            android:layout_above="@+id/fragment_from_activity"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="26dp"
+    ></LinearLayout>
 
-    </LinearLayout>
-
-
+    <!--fragment传值给activity的展示内容-->
+    <fragment
+            android:id="@+id/fragment_from_activity"
+            android:name="com.example.timeless.fragment.ResultFragment"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"/>
 </RelativeLayout>

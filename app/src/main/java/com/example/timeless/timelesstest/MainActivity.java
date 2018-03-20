@@ -17,17 +17,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-        setContentView(R.layout.activity_wuziqi);
+        setContentView(R.layout.activity_main);
+//        setContentView(R.layout.activity_wuziqi);
 
         Log.i(TAG,"MainActivity onCreate");
 
         //activity传值给fragment
-//        btn = (Button) findViewById(R.id.button);
+        btn = (Button) findViewById(R.id.button);
 
         //五子棋
-        wuziqiPanel = (WuziqiPanel) findViewById(R.id.id_wuziqi);
-        btn = (Button) findViewById(R.id.re_start);
+//        wuziqiPanel = (WuziqiPanel) findViewById(R.id.id_wuziqi);
+//        btn = (Button) findViewById(R.id.re_start);
 
         btn.setOnClickListener(this);
         if(savedInstanceState != null){
@@ -38,12 +38,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         //五子棋
-        wuziqiPanel.onceAgain();
+//        wuziqiPanel.onceAgain();
 
         //activity向fragment传值demo（打开SecondActivity.class）
         //显示启动activity--1
-//        Intent intent = new Intent(MainActivity.this,SecondActivity.class);
-//        startActivity(intent);
+        Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+        startActivity(intent);
 //        //显示启动activity--2
 //        Intent intent1 = new Intent();
 //        ComponentName component = new ComponentName(MainActivity.this,SecondActivity.class);
@@ -69,7 +69,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 //        intent5.putExtra(Intent.EXTRA_TEXT,"内容");
 //
 //
-//        startActivity(intent);
+        startActivity(intent);
 
     }
 

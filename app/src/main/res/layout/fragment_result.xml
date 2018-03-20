@@ -8,10 +8,26 @@
 
     <TextView
             android:id="@+id/tx_title_fg"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#4785f9"
-            android:text="this is second fragment"/>
+            android:text="this is second fragment"
+            android:layout_marginTop="25dp" android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+    <EditText
+            android:id="@+id/ed_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="hello to activity"
+            android:layout_marginTop="11dp"
+            android:layout_below="@+id/tx_title_fg" android:layout_alignParentStart="true"/>
+    <Button
+            android:id="@+id/btn_to_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="to Activity"
+            android:layout_below="@+id/ed_fragment" android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"/>
 
 
 </RelativeLayout>
